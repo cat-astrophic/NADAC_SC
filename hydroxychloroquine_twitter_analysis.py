@@ -10,6 +10,7 @@ from nltk.stem import PorterStemmer
 from nltk.sentiment import SentimentIntensityAnalyzer
 from datetime import datetime
 from glob import glob
+from matplotlib import pyplot as plt
 
 # Project directory info
 
@@ -170,6 +171,10 @@ weekly_neg = pd.Series(weekly_neg, name = 'Negative')
 weekly_neu = pd.Series(weekly_neu, name = 'Neutral')
 weekly_com = pd.Series(weekly_com, name = 'Compound')
 weekly_data = pd.concat([week_id, weekly_volume, weekly_pos, weekly_neg, weekly_neu, weekly_com], axis = 1)
+
+# Visualize the time series of tweets per week
+
+plt.plot(weekly_data.Tweets)
 
 # Save dataframes as .csv files
 
