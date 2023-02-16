@@ -8,8 +8,7 @@ from datetime import datetime
 
 # Working directory info
 
-username = ''
-direc = 'C:/Users/' + username + '/Documents/Data/NADAC/'
+direc = 'F:/NADAC/'
 
 # Creating a list of all raw data files
 
